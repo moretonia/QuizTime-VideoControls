@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Verbs I",
+    //"word" : "Czasowniki I"
+    "word" : "Verbs I"
+  },
+  {
+    "id" : "Verbs II",
+    "word" : "Czasowniki II"
+  },
+  {
+    "id" : "Verbs III",
+    "word" : "Czasowniki III"
+  },
+  {
+    "id" : "Verbs IV",
+    "word" : "Czasowniki IV"
+  },
+  {
+    "id" : "Verbs V",
+    "word" : "Czasowniki V"
+  },
+  {
+    "id" : "Verbs VI",
+    "word" : "Czasowniki VI"
+  }
+]

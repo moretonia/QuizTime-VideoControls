@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Bicycles",
+    //"word" : "Biciklik"
+    "word" : "Bicycles"
+  },
+  {
+    "id" : "Boats",
+    "word" : "Hajók"
+  },
+  {
+    "id" : "Driving",
+    "word" : "Vezetés"
+  },
+  {
+    "id" : "Road Signs",
+    "word" : "Útjelző táblák"
+  },
+  {
+    "id" : "Trains",
+    "word" : "Vonatok"
+  },
+  {
+    "id" : "Transportation",
+    "word" : "Közlekedés"
+  }
+]

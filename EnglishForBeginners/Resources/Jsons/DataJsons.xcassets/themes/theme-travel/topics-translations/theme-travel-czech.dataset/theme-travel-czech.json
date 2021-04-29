@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Air Travel",
+    //"word" : "Letecká doprava"
+    "Word" : "Air Travel"
+  },
+  {
+    "id" : "Currency",
+    "word" : "Měna"
+  },
+  {
+    "id" : "Famous Cities",
+    "word" : "Slavná města"
+  },
+  {
+    "id" : "Famous Cities II",
+    "word" : "Slavná města II"
+  },
+  {
+    "id" : "Hotel",
+    "word" : "Hotel"
+  },
+  {
+    "id" : "Tourist Sights",
+    "word" : "Turistické atrakce"
+  }
+]

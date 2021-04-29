@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Desserts",
+    //"word" : "Deserturi"
+    "word" : "Desserts"
+  },
+  {
+    "id" : "Food",
+    "word" : "Mancare"
+  },
+  {
+    "id" : "Fruit",
+    "word" : "Fructe"
+  },
+  {
+    "id" : "Fruit II",
+    "word" : "Fructe II"
+  },
+  {
+    "id" : "Vegetables",
+    "word" : "Legume"
+  },
+  {
+    "id" : "Vegetables II",
+    "word" : "Legume II"
+  }
+]

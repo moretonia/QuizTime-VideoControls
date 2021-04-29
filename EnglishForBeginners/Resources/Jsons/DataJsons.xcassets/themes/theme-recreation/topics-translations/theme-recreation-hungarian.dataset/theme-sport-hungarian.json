@@ -1,0 +1,28 @@
+[
+  {
+    "id" : "Games",
+    //"word" : "Játékok"
+    "word" : "Games"
+
+  },
+  {
+    "id" : "Games II",
+    "word" : "Játékok II"
+  },
+  {
+    "id" : "Sporting Equipment",
+    "word" : "Sportfelszerelés"
+  },
+  {
+    "id" : "Sports",
+    "word" : "Sportok"
+  },
+  {
+    "id" : "Sports II",
+    "word" : "Sportok II"
+  },
+  {
+    "id" : "Leisure",
+    "word" : "Szabadidő"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Body Building",
+    //"word" : "Posilování"
+    "word" : "Body Building"
+  },
+  {
+    "id" : "Body II",
+    "word" : "Tělo II"
+  },
+  {
+    "id" : "Body Parts",
+    "word" : "Části těla"
+  },
+  {
+    "id" : "Dintinguishing Features",
+    "word" : "Rozlišovací znaky"
+  },
+  {
+    "id" : "Facial Features",
+    "word" : "Rysy obličeje"
+  },
+  {
+    "id" : "Hair Styles",
+    "word" : "Účesy"
+  }
+]

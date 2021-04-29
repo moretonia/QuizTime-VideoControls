@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Air Travel",
+    //"word" : "飛行機での旅行"
+    "Word" : "Air Travel"
+  },
+  {
+    "id" : "Currency",
+    "word" : "通貨"
+  },
+  {
+    "id" : "Famous Cities",
+    "word" : "有名都市"
+  },
+  {
+    "id" : "Famous Cities II",
+    "word" : "有名都市II+D73"
+  },
+  {
+    "id" : "Hotel",
+    "word" : "ホテル"
+  },
+  {
+    "id" : "Tourist Sights",
+    "word" : "観光スポット"
+  }
+]

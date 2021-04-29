@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Desserts",
+    //"word" : "ขนม"
+    "word" : "Desserts"
+  },
+  {
+    "id" : "Food",
+    "word" : "อาหาร"
+  },
+  {
+    "id" : "Fruit",
+    "word" : "ผลไม้"
+  },
+  {
+    "id" : "Fruit II",
+    "word" : "ผลไม้ II"
+  },
+  {
+    "id" : "Vegetables",
+    "word" : "ผัก"
+  },
+  {
+    "id" : "Vegetables II",
+    "word" : "ผัก II"
+  }
+]

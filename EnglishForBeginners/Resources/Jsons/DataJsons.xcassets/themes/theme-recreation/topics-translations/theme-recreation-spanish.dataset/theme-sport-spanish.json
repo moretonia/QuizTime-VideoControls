@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Games",
+    //"word" : "juegos"
+    "word" : "Games"
+  },
+  {
+    "id" : "Games II",
+    "word" : "juegos II"
+  },
+  {
+    "id" : "Sporting Equipment",
+    "word" : "equipo deportivo"
+  },
+  {
+    "id" : "Sports",
+    "word" : "deportes"
+  },
+  {
+    "id" : "Sports II",
+    "word" : "deportes II"
+  },
+  {
+    "id" : "Leisure",
+    "word" : "ocio"
+  }
+]

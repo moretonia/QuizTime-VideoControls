@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Desserts",
+    //"word" : "Desszertek"
+    "word" : "Desserts"
+  },
+  {
+    "id" : "Food",
+    "word" : "Étel"
+  },
+  {
+    "id" : "Fruit",
+    "word" : "Gyümölcs"
+  },
+  {
+    "id" : "Fruit II",
+    "word" : "Gyümölcs II"
+  },
+  {
+    "id" : "Vegetables",
+    "word" : "Zöldség"
+  },
+  {
+    "id" : "Vegetables II",
+    "word" : "Zöldség II"
+  }
+]

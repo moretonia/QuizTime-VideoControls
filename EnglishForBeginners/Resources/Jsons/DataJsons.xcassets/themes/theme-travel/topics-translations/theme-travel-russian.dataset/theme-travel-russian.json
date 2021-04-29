@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Air Travel",
+    //"word" : "Авиаперелеты"
+    "Word" : "Air Travel"
+  },
+  {
+    "id" : "Currency",
+    "word" : "Валюта"
+  },
+  {
+    "id" : "Famous Cities",
+    "word" : "Известные города"
+  },
+  {
+    "id" : "Famous Cities II",
+    "word" : "Известные города II"
+  },
+  {
+    "id" : "Hotel",
+    "word" : "Гостиница"
+  },
+  {
+    "id" : "Tourist Sights",
+    "word" : "Туристические достопримечательности"
+  }
+]

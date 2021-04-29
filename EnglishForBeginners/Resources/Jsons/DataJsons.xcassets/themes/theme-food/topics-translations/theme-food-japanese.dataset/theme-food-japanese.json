@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Desserts",
+    //"word" : "デザート"
+    "word" : "Desserts"
+  },
+  {
+    "id" : "Food",
+    "word" : "食べ物"
+  },
+  {
+    "id" : "Fruit",
+    "word" : "フルーツ"
+  },
+  {
+    "id" : "Fruit II",
+    "word" : "フルーツII"
+  },
+  {
+    "id" : "Vegetables",
+    "word" : "野菜"
+  },
+  {
+    "id" : "Vegetables II",
+    "word" : "野菜II"
+  }
+]

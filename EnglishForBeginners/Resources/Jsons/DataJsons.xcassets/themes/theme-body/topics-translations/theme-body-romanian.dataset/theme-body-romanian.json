@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Body Building",
+    //"word" : "Culturism"
+    "word" : "Body Building"
+  },
+  {
+    "id" : "Body II",
+    "word" : "Corp II"
+  },
+  {
+    "id" : "Body Parts",
+    "word" : "Părțile corpului"
+  },
+  {
+    "id" : "Dintinguishing Features",
+    "word" : "Trăsături distinctive"
+  },
+  {
+    "id" : "Facial Features",
+    "word" : "Trăsături ale feței"
+  },
+  {
+    "id" : "Hair Styles",
+    "word" : "Păr"
+  }
+]

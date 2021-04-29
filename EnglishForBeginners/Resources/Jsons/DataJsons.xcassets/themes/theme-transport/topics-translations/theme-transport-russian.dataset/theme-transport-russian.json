@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Bicycles",
+    //"word" : "Велосипеды"
+    "word" : "Bicycles"
+  },
+  {
+    "id" : "Boats",
+    "word" : "Корабли"
+  },
+  {
+    "id" : "Driving",
+    "word" : "Вождение автомобиля"
+  },
+  {
+    "id" : "Road Signs",
+    "word" : "Дорожные знаки"
+  },
+  {
+    "id" : "Trains",
+    "word" : "Поезда"
+  },
+  {
+    "id" : "Transportation",
+    "word" : "Транспорт"
+  }
+]

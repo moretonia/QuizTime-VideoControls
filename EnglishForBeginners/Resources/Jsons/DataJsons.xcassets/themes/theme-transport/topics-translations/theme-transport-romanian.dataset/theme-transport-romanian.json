@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Bicycles",
+    //"word" : "Biciclete"
+    "word" : "Bicycles"
+  },
+  {
+    "id" : "Boats",
+    "word" : "Bărci"
+  },
+  {
+    "id" : "Driving",
+    "word" : "Condus"
+  },
+  {
+    "id" : "Road Signs",
+    "word" : "Semne rutiere"
+  },
+  {
+    "id" : "Trains",
+    "word" : "Trenuri"
+  },
+  {
+    "id" : "Transportation",
+    "word" : "Mijloace de transport"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Business I",
+    //"word" : "ビジネスI"
+    "word" : "Business I"
+  },
+  {
+    "id" : "Business II",
+    "word" : "ビジネスII"
+  },
+  {
+    "id" : "Business III",
+    "word" : "ビジネスIII"
+  },
+  {
+    "id" : "Collectibles",
+    "word" : "コレクターグッズ"
+  },
+  {
+    "id" : "Shopping",
+    "word" : "ショッピング"
+  },
+  {
+    "id" : "Shops",
+    "word" : "ショップ"
+  }
+]

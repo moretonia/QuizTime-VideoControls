@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Clothing",
+    //"word" : "Одяг"
+     "word" : "Clothing"
+  },
+  {
+    "id" : "Glamour",
+    "word" : "Гламур"
+  },
+  {
+    "id" : "Men's Items",
+    "word" : "Чоловічі предмети"
+  },
+  {
+    "id" : "Sportswear",
+    "word" : "Спортивний одяг"
+  },
+  {
+    "id" : "Women's Clothes",
+    "word" : "Жіночий одяг"
+  },
+  {
+    "id" : "Women's Items",
+    "word" : "Жіночі предмети"
+  }
+]

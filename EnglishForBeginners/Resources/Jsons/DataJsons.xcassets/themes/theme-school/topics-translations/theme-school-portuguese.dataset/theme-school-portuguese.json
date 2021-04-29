@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Art",
+    //"word" : "Arte"
+    "word" : "Art"
+  },
+  {
+    "id" : "Musical Instruments",
+    "word" : "Instrumentos Musicais"
+  },
+  {
+    "id" : "School",
+    "word" : "Escola"
+  },
+  {
+    "id" : "School Subjects",
+    "word" : "Disciplinas"
+  },
+  {
+    "id" : "Stationery",
+    "word" : "Papelaria"
+  },
+  {
+    "id" : "Writing",
+    "word" : "Escrita"
+  }
+]

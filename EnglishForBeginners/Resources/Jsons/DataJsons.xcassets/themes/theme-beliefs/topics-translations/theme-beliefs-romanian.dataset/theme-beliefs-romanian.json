@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Ceremonies",
+   // "word" : "Ceremonii"
+    "Word" : "Ceremonies"
+  },
+  {
+    "id" : "Christmas",
+    "word" : "Crăciun"
+  },
+  {
+    "id" : "Church",
+    "word" : "Biserică"
+  },
+  {
+    "id" : "Good Luck",
+    "word" : "Noroc"
+  },
+  {
+    "id" : "Religion",
+    "word" : "Religie"
+  },
+  {
+    "id" : "Zodiac",
+    "word" : "Zodiac"
+  }
+]

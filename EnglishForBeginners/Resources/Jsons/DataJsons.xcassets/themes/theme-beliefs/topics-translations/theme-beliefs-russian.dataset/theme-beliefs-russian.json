@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Ceremonies",
+    //"word" : "Церемонии"
+    "Word" : "Ceremonies"
+  },
+  {
+    "id" : "Christmas",
+    "word" : "Рождество"
+  },
+  {
+    "id" : "Church",
+    "word" : "Церковь"
+  },
+  {
+    "id" : "Good Luck",
+    "word" : "На удачу"
+  },
+  {
+    "id" : "Religion",
+    "word" : "Религия"
+  },
+  {
+    "id" : "Zodiac",
+    "word" : "Зодиак"
+  }
+]

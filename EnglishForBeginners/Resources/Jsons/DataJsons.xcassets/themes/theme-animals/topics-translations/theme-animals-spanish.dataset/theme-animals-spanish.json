@@ -1,0 +1,28 @@
+[
+  {
+    "id" : "African Animals",
+    //"word" : "animales africanos"
+    "word" : "African Animals"
+ 
+  },
+  {
+    "id" : "Dog Breeds",
+    "word" : "razas de perros"
+  },
+  {
+    "id" : "Farm Animals",
+    "word" : "animales de granja"
+  },
+  {
+    "id" : "Fish",
+    "word" : "pescado"
+  },
+  {
+    "id" : "Marine Animals",
+    "word" : "animales marinos"
+  },
+  {
+    "id" : "Pets",
+    "word" : "mascotas"
+  }
+]

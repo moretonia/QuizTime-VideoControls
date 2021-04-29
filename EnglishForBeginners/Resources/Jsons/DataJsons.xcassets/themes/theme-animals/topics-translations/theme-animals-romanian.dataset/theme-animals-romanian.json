@@ -1,0 +1,28 @@
+[
+  {
+    "id" : "African Animals",
+    //"word" : "Animale africane"
+    "word" : "African Animals"
+
+  },
+  {
+    "id" : "Dog Breeds",
+    "word" : "Rase de câini"
+  },
+  {
+    "id" : "Farm Animals",
+    "word" : "Animale de fermă"
+  },
+  {
+    "id" : "Fish",
+    "word" : "Pești"
+  },
+  {
+    "id" : "Marine Animals",
+    "word" : "Animale marine"
+  },
+  {
+    "id" : "Pets",
+    "word" : "Animale de companie"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id" : "African Animals",
+    //"word" : "Afrikai állatok"
+    "word" : "African Animals"
+
+
+  },
+  {
+    "id" : "Dog Breeds",
+    "word" : "Kutyák"
+  },
+  {
+    "id" : "Farm Animals",
+    "word" : "Farm állatok"
+  },
+  {
+    "id" : "Fish",
+    "word" : "Hal"
+  },
+  {
+    "id" : "Marine Animals",
+    "word" : "Tengeri állatok"
+  },
+  {
+    "id" : "Pets",
+    "word" : "Háziállatok"
+  }
+]

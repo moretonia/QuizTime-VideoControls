@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Bathroom",
+    //"word" : "Banheiro"
+    "word" : "Bathroom"
+  },
+  {
+    "id" : "Dining Room",
+    "word" : "Sala de Jantar"
+  },
+  {
+    "id" : "Home",
+    "word" : "Lar"
+  },
+  {
+    "id" : "House",
+    "word" : "Casa"
+  },
+  {
+    "id" : "Kitchen",
+    "word" : "Cozinha"
+  },
+  {
+    "id" : "Materials",
+    "word" : "Materiais"
+  }
+]

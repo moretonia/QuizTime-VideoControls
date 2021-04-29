@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Environment",
+    //"word" : "Çevre"
+    "word" : "Environment"
+  },
+  {
+    "id" : "Farm",
+    "word" : "Çiftlik"
+  },
+  {
+    "id" : "Flowers",
+    "word" : "Çiçekler"
+  },
+  {
+    "id" : "Insects",
+    "word" : "Böcekler"
+  },
+  {
+    "id" : "Plants",
+    "word" : "Bitkiler"
+  },
+  {
+    "id" : "Weather",
+    "word" : "Hava"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Verbs I",
+   // "word" : "Verbe I"
+   "word" : "Verbs I"
+  },
+  {
+    "id" : "Verbs II",
+    "word" : "Verbe II"
+  },
+  {
+    "id" : "Verbs III",
+    "word" : "Verbe III"
+  },
+  {
+    "id" : "Verbs IV",
+    "word" : "Verbe IV"
+  },
+  {
+    "id" : "Verbs V",
+    "word" : "Verbe V"
+  },
+  {
+    "id" : "Verbs VI",
+    "word" : "Verbe VI"
+  }
+]

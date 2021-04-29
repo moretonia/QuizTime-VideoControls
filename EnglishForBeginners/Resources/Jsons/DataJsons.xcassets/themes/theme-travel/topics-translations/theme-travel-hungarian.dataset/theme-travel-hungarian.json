@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Air Travel",
+    //"word" : "Légi utazás"
+    "Word" : "Air Travel"
+  },
+  {
+    "id" : "Currency",
+    "word" : "Valuta"
+  },
+  {
+    "id" : "Famous Cities",
+    "word" : "Híres városok"
+  },
+  {
+    "id" : "Famous Cities II",
+    "word" : "Híres városok II"
+  },
+  {
+    "id" : "Hotel",
+    "word" : "Hotel"
+  },
+  {
+    "id" : "Tourist Sights",
+    "word" : "Turisztikai látványosságok"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Ceremonies",
+    //"word" : "Szertartások"
+    "Word" : "Ceremonies"
+  },
+  {
+    "id" : "Christmas",
+    "word" : "Karácsony"
+  },
+  {
+    "id" : "Church",
+    "word" : "Templom"
+  },
+  {
+    "id" : "Good Luck",
+    "word" : "Szerencse"
+  },
+  {
+    "id" : "Religion",
+    "word" : "Vallás"
+  },
+  {
+    "id" : "Zodiac",
+    "word" : "Állatöv"
+  }
+]

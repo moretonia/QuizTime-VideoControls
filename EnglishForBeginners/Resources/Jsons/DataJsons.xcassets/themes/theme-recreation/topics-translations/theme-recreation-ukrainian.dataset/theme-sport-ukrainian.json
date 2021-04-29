@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "Games",
+    //"word" : "Ігри"
+   "word" : "Games"
+  },
+  {
+    "id" : "Games II",
+    "word" : "Ігри II"
+  },
+  {
+    "id" : "Sporting Equipment",
+    "word" : "Спортивний інвентар"
+  },
+  {
+    "id" : "Sports",
+    "word" : "Спорт"
+  },
+  {
+    "id" : "Sports II",
+    "word" : "Спорт II"
+  },
+  {
+    "id" : "Leisure",
+    "word" : "Дозвілля"
+  }
+]
