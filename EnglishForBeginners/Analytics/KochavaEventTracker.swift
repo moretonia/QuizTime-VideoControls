@@ -6,7 +6,7 @@
 //  Copyright © 2020 Omega-R. All rights reserved.
 //
 
-import AdSupport
+/*import AdSupport
 import Foundation
 
 class KochavaEventTracker {
@@ -65,15 +65,15 @@ class KochavaEventTracker {
     private static func trackExperienceAchievementEvent(_ experienceAchievement: ExperienceAchivement) {
         //guard let idfa = identifierForAdvertising() else { return }
 
-        if let event = KochavaEvent(eventTypeEnum: .achievement) {
+        let event = KVAEvent(type: .achievement)
             event.nameString = experienceAchievement.description
             event.infoDictionary = [
                 "experience": experienceAchievement.rawValue,
           //      "idfa": idfa
             ]
 
-            KochavaTracker.shared.send(event)
-        }
+        event.send()
+        
     }
 }
 
@@ -85,4 +85,4 @@ extension KochavaEventTracker {
         // Get and return IDFA
         return ASIdentifierManager.shared().advertisingIdentifier.uuidString
     }
-}
+}*/

@@ -8,10 +8,10 @@ target 'EnglishForBeginners' do
   pod 'ORCommonUI-Swift'
   pod 'ORCoreData'
   
-  pod 'MagicalRecord', '~> 2.3.2'
+  pod 'MagicalRecord' , '~> 2.3.2'
   
   pod 'UICircularProgressRing'
-  pod 'ISPageControl', '~> 0.1.0'
+  pod 'ISPageControl' , '~> 0.1.0'
   pod 'iCarousel'
 
   pod 'FBSDKLoginKit'
@@ -24,7 +24,7 @@ target 'EnglishForBeginners' do
   pod 'Flurry-iOS-SDK/FlurryMessaging'
   
   pod 'ReachabilitySwift'
-  pod 'KochavaTrackeriOS'
+  pod 'KochavaTrackeriOS', '~> 4.0'
   
   pod 'RxSwift'
   pod 'RxCocoa'

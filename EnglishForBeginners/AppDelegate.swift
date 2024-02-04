@@ -14,6 +14,7 @@ import FBSDKCoreKit
 import Flurry_iOS_SDK
 import AdColony
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -22,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        KochavaTracker.shared.configure(withParametersDictionary:[kKVAParamAppGUIDStringKey: "ko1k-english-learn-1000-words-elgtgas"], delegate: nil)
-         //https://support.freeappanalytics/.com/sdk-integration/ios-sdk-integration//
+       /* KVATracker.shared.appTrackingTransparency.enabledBool = true
+        KVATracker.shared.start(withAppGUIDString: "ko1k-english-learn-1000-words-elgtgas")*/
+         //https://support.freeappanalytics.com/sdk-integration/ios-sdk-integration//
         
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         MagicalRecord.setupCoreDataStack(withAutoMigratingSqliteStoreNamed: "EnglishForBeginners")

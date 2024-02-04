@@ -88,7 +88,7 @@ class ProfileManager {
             })
             
             if profile.experience < experience {
-                KochavaEventTracker.trackExperienceChangeIfNeeded(previousExperience: Int(profile.experience), currentExperience: experience)
+              //  KochavaEventTracker.trackExperienceChangeIfNeeded(previousExperience: Int(profile.experience), currentExperience: experience)
                 profile.experience = Int32(experience)              
             }
         }) {

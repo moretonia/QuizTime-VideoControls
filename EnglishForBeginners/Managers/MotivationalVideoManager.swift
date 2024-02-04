@@ -9,9 +9,10 @@
 import Foundation
 
 class MotivationalVideoManager {
-    static let baseURL = URL(string: "https://thirdageapps.com/thirdageapps.com/Rolandsen/Motivational_Movies")!
+    static let baseURL = URL(string: //"https://thirdageapps.com/thirdageapps.com/Rolandsen/Motivational_Movies")!
+                             "https://drongoapps.com/Motivational_Movies")!
     static let filenameFormat = "mtvnl_%d.mp4"
-    static let maxVideoNumber = 126
+    static let maxVideoNumber = 24
     
     static let shared = MotivationalVideoManager()
     

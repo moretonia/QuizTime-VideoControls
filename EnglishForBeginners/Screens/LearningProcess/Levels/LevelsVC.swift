@@ -310,9 +310,9 @@ class LevelsVC: BaseVC, LevelFailedDelegate, LessonActionViewDelegate, SpeechSyn
         }
         let isCorrectAndCorrectAnswer = questionValidator.checkAnswer(answer)
 
-        if (isCorrectAndCorrectAnswer.isCorrect) {
+      /*  if (isCorrectAndCorrectAnswer.isCorrect) {
             AudioManager.shared.playCorrectAnswerSound()
-        }
+        }*/
         
         if questionProvider.canSkipQuestion, !isCorrectAndCorrectAnswer.isCorrect {
             lessonActionView.state = .skip

@@ -42,7 +42,7 @@ struct Constants {
     
     //static let privacySite: String = "https://www.iubenda.com/privacy-policy/32551649"
     
-    static let privacySite: String = "https://www.thirdageapps.com/privacy"
+    static let privacySite: String = "https://www.drongoapps.com"
     
 }
 

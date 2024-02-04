@@ -64,6 +64,7 @@ class LevelCompletionVC: BaseVC {
             animateStars()
         } else {
             showTeacher()
+            
         }
     }
 
@@ -144,21 +145,23 @@ class LevelCompletionVC: BaseVC {
     }
 
     func showTeacher() {
-        if (isExamCompletion) {
+     /*   if (isExamCompletion) {
             teacherImageView.image = UIImage(named: "teacher_three_stars")
             AudioManager.shared.playQuizResultSound(stars: 3)
         } else {
             if (stars == 1) {
                 teacherImageView.image = UIImage(named: "teacher_one_star")
             } else if (stars == 2) {
-                teacherImageView.image = UIImage(named: "teacher_two_stars")
+               teacherImageView.image = UIImage(named: "teacher_two_stars")
             } else if (stars == 3) {
-                teacherImageView.image = UIImage(named: "teacher_three_stars")
+               teacherImageView.image = UIImage(named: "teacher_three_stars")
             }
             AudioManager.shared.playQuizResultSound(stars: stars)
-        }
+        }*/
 
-        or_dispatch_in_main_queue_after(2.5) { [weak self] in
+        //or_dispatch_in_main_queue_after(2.5) { [weak self] in
+        
+        or_dispatch_in_main_queue_after(0.75) { [weak self] in
             if let sSelf = self {
                 sSelf.playVideo()
             }
