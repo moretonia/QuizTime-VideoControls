@@ -5,4 +5,7 @@ Originally, the app incorporated AdColony ads at the end of quizzes, but these h
 KochavaTracker, which used to track users' actions, has also been disabled.
 The app currently uses Flurry to track some user actions, but this will be discontinued in March, 2023.
 The efficiency of the app might benefit by having AdColony, Kochava and Flurry code removed completely.
+
+*** NOTE that POD INSTALL will be required to install the required pods ***
+
 # QuizTime
