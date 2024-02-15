@@ -1,4 +1,8 @@
-# ModelEnglish
-This is the only real change to the app since its inception: the creation of two new quiz types, namely Look and Listen. These quiz types add some variety
-and interest with users sometimes guessing the answers from the provided letters specific to each word.
+# QuizTime
+Currently, a video plays at the end of each quiz; most videos are around 5 - 7 seconds in order to reduce download times.
+The use has absolutely no control over the videos, and must watch it until the end.
+Originally, the app incorporated AdColony ads at the end of quizzes, but these have been disabled. 
+KochavaTracker, which used to track users' actions, has also been disabled.
+The app currently uses Flurry to track some user actions, but this will be discontinued in March, 2023.
+The efficiency of the app might benefit by having AdColony, Kochava and Flurry code removed completely.
 # QuizTime
