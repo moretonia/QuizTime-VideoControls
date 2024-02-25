@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Flurry_iOS_SDK
+//import Flurry_iOS_SDK
 
 typealias FlurryParametersType = [String: Any]
 
@@ -62,11 +62,11 @@ class FlurryAnalytics {
         
         parameters[AnalyticsParameter.Type_Of_Experience.rawValue] = currentRank.englishTitle
         
-        if isFlurryActive {
-            Flurry.logEvent(event.rawValue, withParameters: parameters)
-        } else {
-            print(parameters)
-        }
+//        if isFlurryActive {
+//            Flurry.logEvent(event.rawValue, withParameters: parameters)
+//        } else {
+//            print(parameters)
+//        }
     }
     
     static func logEventTimedFromSessionStart(event: AnalyticsEvent, parameters: FlurryParametersType? = nil) {

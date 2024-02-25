@@ -17,9 +17,6 @@ PODS:
     - FBSDKShareKit/Share (= 7.1.1)
   - FBSDKShareKit/Share (7.1.1):
     - FBSDKCoreKit (~> 7.1.1)
-  - Flurry-iOS-SDK/FlurryMessaging (10.3.4):
-    - Flurry-iOS-SDK/FlurrySDK
-  - Flurry-iOS-SDK/FlurrySDK (10.3.4)
   - iCarousel (1.8.3)
   - ISPageControl (0.1.0)
   - KochavaCoreiOS (4.5.0)
@@ -51,8 +48,6 @@ DEPENDENCIES:
   - Fabric
   - FBSDKLoginKit
   - FBSDKShareKit
-  - Flurry-iOS-SDK/FlurryMessaging
-  - Flurry-iOS-SDK/FlurrySDK
   - iCarousel
   - ISPageControl (~> 0.1.0)
   - KochavaTrackeriOS (~> 4.0)
@@ -80,7 +75,6 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FBSDKShareKit
-    - Flurry-iOS-SDK
     - iCarousel
     - ISPageControl
     - KochavaCoreiOS
@@ -102,11 +96,10 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
   FBSDKShareKit: 00a055c1999b099596e00212dd1c0600c6697019
-  Flurry-iOS-SDK: e6f44e2aeb389d93b874483555a5e8f0cfd42ea2
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   ISPageControl: cadeb38e9ecdf05540c69ea1132612521b3caa2a
-  KochavaCoreiOS: 70fafcb7739358232b05fb95b1acbce643ca2ce3
-  KochavaTrackeriOS: 03d1f8729eef022b06f48c836652b16303096b1c
+  KochavaCoreiOS: c96b22fcf87f6b4a81abc287dd56c081ecad3ffd
+  KochavaTrackeriOS: 5f7d11c08ec35dcf61fe2973798a331772c78a93
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   ORCommonCode-Swift: 9a2504577d8549905163f1d03ce9e0718dc37b0b
   ORCommonUI-Swift: 1a518401653f448174769781fe0acc07c2dae94d
@@ -120,6 +113,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
 
-PODFILE CHECKSUM: c429d3896fa105dfb679133fb183d692737c4c3c
+PODFILE CHECKSUM: ebead71899339c32281fa007abd6c25318ac96d2
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.13.0

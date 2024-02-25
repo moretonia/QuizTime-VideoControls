@@ -11,7 +11,7 @@ import MagicalRecord
 import Fabric
 import Crashlytics
 import FBSDKCoreKit
-import Flurry_iOS_SDK
+//import Flurry_iOS_SDK
 import AdColony
 
 
@@ -33,30 +33,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Crashlytics().debugMode = true
         Fabric.with([Crashlytics.self])
         
-        FlurryMessaging.setAutoIntegrationForMessaging()
-        let builder = FlurrySessionBuilder.init().withIncludeBackgroundSessions(inMetrics: true)
-        //Flurry.startSession("XK6QMKQTN6KVGWF4Y63X", with: builder)
-        Flurry.startSession("SQM37JJBDGG85WXWB8JP" , with: builder)
+//        FlurryMessaging.setAutoIntegrationForMessaging()
+//        let builder = FlurrySessionBuilder.init().withIncludeBackgroundSessions(inMetrics: true)
+//        //Flurry.startSession("XK6QMKQTN6KVGWF4Y63X", with: builder)
+//        Flurry.startSession("SQM37JJBDGG85WXWB8JP" , with: builder)
 
         AdManager.shared.initAds()
 
 
         // delegate method, invoked when a notification is received
-        func didReceive(_ message: FlurryMessage) {
-            print("didReceiveMessage = \(message.description)")
-            // additional logic here
-        }
-        
-        // delegate method when a notification action is performed
-        func didReceiveAction(withIdentifier identifier: String?, message: FlurryMessage) {
-            print("didReceiveAction \(identifier ?? "no identifier"), Message = \(message.description)");
-            // additional logic here, ex: deeplink. See Flurry Push Sample App for example
-        }
-        
-        if isFlurryActive {
-        // Flurry.startSession("XK6QMKQTN6KVGWF4Y63X")
-           Flurry.startSession("SQM37JJBDGG85WXWB8JP")
-        }
+//        func didReceive(_ message: FlurryMessage) {
+//            print("didReceiveMessage = \(message.description)")
+//            // additional logic here
+//        }
+//        
+//        // delegate method when a notification action is performed
+//        func didReceiveAction(withIdentifier identifier: String?, message: FlurryMessage) {
+//            print("didReceiveAction \(identifier ?? "no identifier"), Message = \(message.description)");
+//            // additional logic here, ex: deeplink. See Flurry Push Sample App for example
+//        }
+//        
+//        if isFlurryActive {
+//        // Flurry.startSession("XK6QMKQTN6KVGWF4Y63X")
+//           Flurry.startSession("SQM37JJBDGG85WXWB8JP")
+//        }
         
         UIApplication.shared.statusBarStyle = .default
         

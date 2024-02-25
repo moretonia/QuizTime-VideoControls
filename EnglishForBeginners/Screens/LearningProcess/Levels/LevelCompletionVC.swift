@@ -11,8 +11,46 @@ import ORCommonCode_Swift
 import AVFoundation
 import AVKit
 import Reachability
+import Photos
 
-class LevelCompletionVC: BaseVC {
+class LevelCompletionVC: BaseVC, URLSessionDownloadDelegate {
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        let fileManager = FileManager.default
+            let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let permanentURL = documentsDirectory.appendingPathComponent(location.lastPathComponent)
+
+            do {
+                // If file already exists, remove it (optional)
+                if fileManager.fileExists(atPath: permanentURL.path) {
+                    try fileManager.removeItem(at: permanentURL)
+                }
+
+                try fileManager.moveItem(at: location, to: permanentURL)
+                // Now you can safely save the video to the Photos library
+                saveVideoToPhotoLibrary(url: permanentURL)
+            } catch {
+                print("Could not move file to permanent location: \(error)")
+            }
+    }
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        if let error = error {
+                print("Download error: \(error.localizedDescription)")
+            } else {
+                print("Download task completed successfully.")
+            }
+    }
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
+        
+        DispatchQueue.main.async {
+            // Update your progress bar's value here
+            print("progress is \(progress)")
+        }
+    }
+    
+    
+    
+    
     @IBOutlet weak var viewStarsContainer: UIView!
     @IBOutlet weak var viewNewRank: UIView!
     @IBOutlet weak var viewExperienceInfoContainer: UIView!
@@ -29,6 +67,7 @@ class LevelCompletionVC: BaseVC {
     weak var viewExperienceInfo: ExperienceInfoView!
     weak var starsView: StarsView!
     
+    var activityIndicator: UIActivityIndicatorView?
     var stars: Int = 0
     var experience: Int = 0
     var topic: Topic?
@@ -40,8 +79,17 @@ class LevelCompletionVC: BaseVC {
     
     lazy var playerViewController: AVPlayerViewController = {
         let playerViewController = AVPlayerViewController()
-        playerViewController.showsPlaybackControls = false
+        playerViewController.showsPlaybackControls = true
         return playerViewController
+    }()
+    
+    lazy var closeButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Close", for: .normal)
+        button.addTarget(self, action: #selector(closePlayer), for: .touchUpInside)
+        button.tintColor = UIColor.white
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        return button
     }()
     
     // MARK: - ViewController lifecycle
@@ -55,6 +103,14 @@ class LevelCompletionVC: BaseVC {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    @objc func closePlayer() {
+        // Example of stopping the player and removing the view
+        quitVideoAndShowProgress()
+        
+        // If using a modal presentation, you might instead call:
+        // dismiss(animated: true, completion: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -145,21 +201,6 @@ class LevelCompletionVC: BaseVC {
     }
 
     func showTeacher() {
-     /*   if (isExamCompletion) {
-            teacherImageView.image = UIImage(named: "teacher_three_stars")
-            AudioManager.shared.playQuizResultSound(stars: 3)
-        } else {
-            if (stars == 1) {
-                teacherImageView.image = UIImage(named: "teacher_one_star")
-            } else if (stars == 2) {
-               teacherImageView.image = UIImage(named: "teacher_two_stars")
-            } else if (stars == 3) {
-               teacherImageView.image = UIImage(named: "teacher_three_stars")
-            }
-            AudioManager.shared.playQuizResultSound(stars: stars)
-        }*/
-
-        //or_dispatch_in_main_queue_after(2.5) { [weak self] in
         
         or_dispatch_in_main_queue_after(0.75) { [weak self] in
             if let sSelf = self {
@@ -258,47 +299,187 @@ class LevelCompletionVC: BaseVC {
 
 // MARK: - Video
 extension LevelCompletionVC {
+    
+    
+    
     func playVideo() {
+        
+        if activityIndicator == nil {
+            if #available(iOS 13.0, *) {
+                activityIndicator = UIActivityIndicatorView(style: .large)
+            } else {
+                activityIndicator = UIActivityIndicatorView(style: .gray)
+            }
+                activityIndicator?.center = view.center
+                activityIndicator?.hidesWhenStopped = true
+                if let indicator = activityIndicator {
+                    playerViewController.view.addSubview(indicator)
+                }
+            }
+        
+        activityIndicator?.startAnimating()
         guard
             let reachability = try? Reachability(),
             [.cellular, .wifi].contains(reachability.connection)
         else {
             showResults()
-            
+            activityIndicator?.stopAnimating()
             return
         }
-        
         let videoURL = MotivationalVideoManager.shared.nextVideoURL
-        
         let player = AVPlayer(url: videoURL)
         player.volume = 5
         playerViewController.player = player
-        
         addChild(playerViewController)
         playerViewController.view.frame = view.frame
         view.addSubview(playerViewController.view)
         
-        playerViewController.view.alpha = 0
         
+        playerViewController.contentOverlayView?.addSubview(self.closeButton)
+        closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 24)
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        if let overlayView = playerViewController.contentOverlayView {
+            overlayView.addSubview(closeButton)
+            
+            let guide = overlayView.safeAreaLayoutGuide
+            NSLayoutConstraint.activate([
+                closeButton.topAnchor.constraint(equalTo: guide.topAnchor, constant: 0),
+                closeButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: 0),
+                closeButton.widthAnchor.constraint(equalToConstant: 100),
+                closeButton.heightAnchor.constraint(equalToConstant: 100)
+            ])
+        }
+        
+        playerViewController.view.alpha = 0
         UIView.animate(withDuration: 0.5, delay: 0, options: []) { [weak self] in
             self?.playerViewController.view.alpha = 1
-        } completion: { _ in
-            player.play()
             
-            MotivationalVideoManager.shared.setNextVideoAsLast()
+        } completion: { _ in
+            self.activityIndicator?.stopAnimating()
+            player.play()
         }
     }
     
     @objc func playerDidFinishPlaying() {
+
+        let alertController = UIAlertController(title: "Video Completed.", message: "Do You want to download this video to your photo library? Your video will be downloaded in the background while you can keep using the app.", preferredStyle: .alert)
+        let downloadAction = UIAlertAction(title: "Download", style: .default) { (action) in
+            // Handle the action when the user taps the button
+            self.checkDownloadPermission()
+            
+        }
+        let quitAction = UIAlertAction(title: "Quit", style: .default) { (action) in
+            // Handle the action when the user taps the button
+            self.quitVideoAndShowProgress()
+        }
+        alertController.addAction(downloadAction)
+        alertController.addAction(quitAction)
+        
+        self.present(alertController, animated: true)
+        
+        
+    }
+    
+    func quitVideoAndShowProgress(){
+        MotivationalVideoManager.shared.setNextVideoAsLast()
+
+        // close the video and show results
         UIView.animate(withDuration: 0.5, delay: 0, options: []) { [weak self] in
             self?.playerViewController.view.alpha = 0
         } completion: { [weak self] _ in
             or_dispatch_in_main_queue_after(0.5) { [weak self] in
                 self?.playerViewController.removeFromParent()
                 self?.playerViewController.view.removeFromSuperview()
-                
                 self?.showResults()
             }
         }
     }
+    
+    
+    // download video from a url
+    func downloadAndSaveVideo(from urlString: URL) {
+        quitVideoAndShowProgress()
+        DispatchQueue.global(qos: .background).async {
+            let urlData = NSData(contentsOf: urlString)
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
+            let filePath="\(documentsPath)/tempFile.mp4"
+            DispatchQueue.main.async {
+                urlData?.write(toFile: filePath, atomically: true)
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: filePath))
+                }) { completed, error in
+                    if completed {
+                        print("Video is saved!")
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+    
+    private func saveVideoToPhotoLibrary(url: URL) {
+        
+        switch PHPhotoLibrary.authorizationStatus() {
+        case .authorized:
+            let videoPath = url.path
+                // Save the video
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
+            }) { saved, error in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        print("Error saving video to photo library: \(error.localizedDescription), \(error)")
+    
+                    } else if saved {
+                        print("Video successfully saved to photo library.")
+                    }
+                }
+            }
+        default:
+            print("default")
+        }
+    }
+    
+    // Check Download and save permission from the user's phone.
+    func checkDownloadPermission(){
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .authorized:
+            // Permission already granted
+            print("Authorized")
+            downloadAndSaveVideo(from: MotivationalVideoManager.shared.nextVideoURL)
+        case .notDetermined:
+            // Request permission
+            PHPhotoLibrary.requestAuthorization { newStatus in
+                if newStatus == .authorized {
+                    self.downloadAndSaveVideo(from: MotivationalVideoManager.shared.nextVideoURL)
+                } else {
+                    print("Denied")
+                    self.quitVideoAndShowProgress()
+                }
+            }
+        case .denied:
+            quitVideoAndShowProgress()
+            
+        default:
+            // Permission denied
+            self.showPermissionAlert(title: "Photo Library Permission.", message: "We need to use photo library in order to download your videos. You can change this in App Settings.")
+            
+        }
+    }
+    
+    // If the user has denied permission, handle the case.
+    func showPermissionAlert(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+            // Handle the action when the user taps the button
+            self.quitVideoAndShowProgress()
+        }
+        alertController.addAction(okAction)
+        
+    }
+    
+    
+    
 }

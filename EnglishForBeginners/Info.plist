@@ -81,6 +81,10 @@
 	<string>Some ad content may require access to accelerometer for interactive ad experience.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Facebook posts show your cover photo</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We need access to photo library so we can save your videos.</string>
+	<key>Privacy - Photo Library Add Usave</key>
+	<string></string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>App wants to recognize your speech</string>
 	<key>UIBackgroundModes</key>

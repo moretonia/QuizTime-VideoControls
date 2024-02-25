@@ -20,8 +20,8 @@ target 'EnglishForBeginners' do
   pod 'Fabric'
   pod 'Crashlytics'
   
-  pod 'Flurry-iOS-SDK/FlurrySDK'
-  pod 'Flurry-iOS-SDK/FlurryMessaging'
+  #pod 'Flurry-iOS-SDK/FlurrySDK'
+  #pod 'Flurry-iOS-SDK/FlurryMessaging'
   
   pod 'ReachabilitySwift'
   pod 'KochavaTrackeriOS', '~> 4.0'
