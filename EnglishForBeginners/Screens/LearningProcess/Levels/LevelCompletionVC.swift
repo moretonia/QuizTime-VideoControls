@@ -83,14 +83,6 @@ class LevelCompletionVC: BaseVC, URLSessionDownloadDelegate {
         return playerViewController
     }()
     
-    lazy var closeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Close", for: .normal)
-        button.addTarget(self, action: #selector(closePlayer), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        return button
-    }()
     
     // MARK: - ViewController lifecycle
     
@@ -103,14 +95,6 @@ class LevelCompletionVC: BaseVC, URLSessionDownloadDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
-    
-    @objc func closePlayer() {
-        // Example of stopping the player and removing the view
-        quitVideoAndShowProgress()
-        
-        // If using a modal presentation, you might instead call:
-        // dismiss(animated: true, completion: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -335,20 +319,6 @@ extension LevelCompletionVC {
         view.addSubview(playerViewController.view)
         
         
-        playerViewController.contentOverlayView?.addSubview(self.closeButton)
-        closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 24)
-        closeButton.translatesAutoresizingMaskIntoConstraints = false
-        if let overlayView = playerViewController.contentOverlayView {
-            overlayView.addSubview(closeButton)
-            
-            let guide = overlayView.safeAreaLayoutGuide
-            NSLayoutConstraint.activate([
-                closeButton.topAnchor.constraint(equalTo: guide.topAnchor, constant: 0),
-                closeButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: 0),
-                closeButton.widthAnchor.constraint(equalToConstant: 100),
-                closeButton.heightAnchor.constraint(equalToConstant: 100)
-            ])
-        }
         
         playerViewController.view.alpha = 0
         UIView.animate(withDuration: 0.5, delay: 0, options: []) { [weak self] in
